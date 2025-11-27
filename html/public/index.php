@@ -1,4 +1,11 @@
-<?php include '../source/views/header.php'; ?>
+<?php include '../source/views/header.php';
+      include '../source/config.php';
+      include '../source/database.php';
+
+      $result = $connection->query("SELECT * from Producten");
+ 
+print_r($result->fetch_all());
+?>
 
     <section class="over_ons">
         <h2>Over ons</h2>
@@ -10,10 +17,7 @@
         <h2>afbeeldingen</h2>
         <section class="DEALS">
             <?php include '../source/views/apple.php'; ?>
-           <?php include '../source/views/apple.php'; ?>
-           <?php include '../source/views/apple.php'; ?>
         </section>
     </section>
 
     <?php include '../source/views/foet.php'; ?>
-    
